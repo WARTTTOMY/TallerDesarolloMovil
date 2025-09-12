@@ -13,28 +13,4 @@ const CrearTareaScreen = ({ navigation }) => {
   const [prioridad, setPrioridad] = useState("");
   
 
-  // validamos cada vez que chagamos un cambio 
-  useEffect(() => {
-    const Validar =
-      titulo.trim().length > 0 &&
-      descripcion.trim().length > 0 &&
-      fecha.trim().length > 0 &&
-      prioridad.trim().length > 0;
-
-    setIsFormValid(Validar);
-  }, [titulo, descripcion, fecha, prioridad]);
-
-  // Guardar la tarea
-  const Guardar = () => {
-    if (!FormValidar) {
-      Alert.alert("Error", "Por favor, complete todos los campos.");
-      return;
-    }
-
-    const nuevaTarea = { titulo, descripcion, fecha, prioridad };
-
-    // Navegar a otra pantalla pasando la tarea creada
-    navigation.navigate("ListaTareas", { tarea: nuevaTarea });
-  };
-
 }
