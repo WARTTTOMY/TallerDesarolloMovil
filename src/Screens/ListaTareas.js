@@ -22,7 +22,7 @@ const ListaTareasScreen = ({ route }) => {
     </View>
   );
 
-   return (
+  return (
     <View style={styles.container}>
       <Text style={styles.header}>📋 Lista de Tareas</Text>
 
@@ -34,7 +34,39 @@ const ListaTareasScreen = ({ route }) => {
           keyExtractor={(item, index) => index.toString()}
           renderItem={renderItem}
         />
-       ) }
+      )}
     </View>
   );
-}
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    padding: 16,
+    backgroundColor: "#f4f4f4",
+  },
+  header: {
+    fontSize: 22,
+    fontWeight: "bold",
+    marginBottom: 12,
+  },
+  vacio: {
+    fontSize: 16,
+    color: "gray",
+    textAlign: "center",
+    marginTop: 20,
+  },
+  card: {
+    padding: 12,
+    backgroundColor: "white",
+    borderRadius: 8,
+    marginBottom: 10,
+    elevation: 2,
+  },
+  titulo: {
+    fontSize: 18,
+    fontWeight: "bold",
+  },
+});
+
+export default ListaTareasScreen;
