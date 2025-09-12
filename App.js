@@ -27,6 +27,11 @@ export default function App() {
             component={ViewProfile} 
             options={{ title: 'Ver Lista de tareas' }}
           />
+          <Stack.Screen 
+            name="Borrar_tareas" 
+            component={ViewProfile} 
+            options={{ title: 'Ver Lista de tareas' }}
+          />
         </Stack.Navigator>
       </NavigationContainer>
     </PaperProvider>
