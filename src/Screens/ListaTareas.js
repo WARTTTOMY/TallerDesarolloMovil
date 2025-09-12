@@ -12,4 +12,14 @@ const ListaTareasScreen = ({ route }) => {
     }
   }, [route.params?.tarea]);
 
-   }
+   // Renderizar cada tarea en la lista
+  const renderItem = ({ item }) => (
+    <View style={styles.card}>
+      <Text style={styles.titulo}>{item.titulo}</Text>
+      <Text>{item.descripcion}</Text>
+      <Text>Fecha: {item.fecha}</Text>
+      <Text>Prioridad: {item.prioridad}</Text>
+    </View>
+  );
+
+ }
