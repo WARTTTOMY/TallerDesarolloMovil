@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { View, Text, TextInput, Button, Alert, StyleSheet } from "react-native";
 
-import styles from "../Styles/styles"; // Importación de los estilos
+import { StyleSheet, Platform } from "react-native";
 import { ScrollView } from "react-native/types_generated/index";
 
 
@@ -38,4 +38,59 @@ const EditarTarea = ({ tarea, onActualizar, navigation }) => {
     navigation.goBack(); //volver 
   };
 
-  
+
+  Return (
+    <ScrollView>
+        <View>
+            <text style = {styles.container}>
+                Titulo
+                <TextInput 
+                    style={styles.input}
+                    value={titulo}
+                    onChangeText={setTitulo}
+                    placeholder="Editar título"
+                />
+            </text>
+        </View>
+
+        <View>
+            <text style = {styles.container}>
+                Descripción
+                <TextInput 
+                    style={styles.input}
+                    value={descripcion}
+                    onChangeText={setDescripcion}
+                    placeholder="Editar descripción"
+                />
+            </text>
+        </View>
+
+        <View>
+            <text style = {styles.container}>
+                Fecha
+                <TextInput 
+                    style={styles.input}
+                    value={fecha}
+                    onChangeText={setFecha}
+                    placeholder="Editar Fecha"
+                />
+            </text>
+        </View>
+
+        <View>
+            <text style = {styles.container}>
+                Titulo
+                <TextInput 
+                    style={styles.input}
+                    value={prioridad}
+                    onChangeText={setPrioridad}
+                    placeholder="Editar Prioridad"
+                />
+            </text>
+        </View>
+    </ScrollView>
+  );
+
+};
+
+export default EditarTarea;
