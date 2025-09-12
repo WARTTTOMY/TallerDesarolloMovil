@@ -22,4 +22,20 @@ const ListaTareasScreen = ({ route }) => {
     </View>
   );
 
- }
+   return (
+    <View style={styles.container}>
+      <Text style={styles.header}>📋 Lista de Tareas</Text>
+
+      {tareas.length === 0 ? (
+        <Text style={styles.vacio}>No hay tareas aún</Text>
+      ) : (
+        <FlatList
+          data={tareas}
+          keyExtractor={(item, index) => index.toString()}
+          renderItem={renderItem}
+        />
+      )}
+    </View>
+  );
+};
+
