@@ -4,7 +4,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { Button } from "react-native";
 
 // Pantallas del proyecto
-import CrearTareaScreen from "./src/Screens/Crear_lista"; 
+import CrearTareaScreen from "./src/Screens/Crear_tarea"; 
 import EditarTareaScreen from "./src/Screens/Editar_Tarea"; 
 import ListaTareasScreen from "./src/Screens/ListaTareas"; 
 
