@@ -4,9 +4,9 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { Button } from "react-native";
 
 // Las pantallas de juanpa ,luismi y yo xd
-import CrearTareaScreen from "./screens/Editar_Tarea"; 
-import ListarTareasScreen from "./screens/ListarTareas"; 
-import MostrarListaScreen from "./screens/Crear_tarea"; 
+import CrearTareaScreen from "./src/Screens/Editar_Tarea"; 
+import ListarTareasScreen from "./src/Screens/Crear_tarea"; 
+import MostrarListaScreen from "./src/Screens/ListaTareas"; 
 
 const Stack = createStackNavigator();
 
@@ -30,5 +30,6 @@ function HomeScreen({ navigation }) {
       <Button title="Listar Tareas" onPress={() => navigation.navigate("ListarTareas")} />
       <Button title="Mostrar Lista" onPress={() => navigation.navigate("MostrarLista")} />
     </>
+
   );
 }
