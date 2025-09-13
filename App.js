@@ -4,15 +4,16 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { Button } from "react-native";
 
 // Las pantallas de juanpa ,luismi y yo xd
-import CrearTareaScreen from "./src/Screens/Editar_Tarea"; 
-import ListarTareasScreen from "./src/Screens/Crear_tarea"; 
-import MostrarListaScreen from "./src/Screens/ListaTareas"; 
+import CrearTareaScreen from "./src/Screens/Crear_lista"; 
+import EditarTareaScreen from "./src/Screens/Editar_Tarea"; 
+import ListaTareasScreen from "./src/Screens/ListaTareas";
+
 
 const Stack = createStackNavigator();
 
 export default function App() {
   return (
-    <NavigationContainer>
+    <NavigationContainer>crear
       <Stack.Navigator initialRouteName="Home">
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="CrearTarea" component={CrearTareaScreen} />
