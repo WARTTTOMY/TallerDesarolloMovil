@@ -1,39 +1,29 @@
 import React from "react";
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { PaperProvider } from "react-native-paper"; 
-import AddTaskScreen from "./src/Screens/";
-import ViewProfile from "./src/Screens/ViewProfile";
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
+import { Button } from "react-native";
 
 const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
-    <PaperProvider>
-      <NavigationContainer>
-        <Stack.Navigator initialRouteName="CreateProfile">
-          <Stack.Screen 
-            name="Editar_Tarea" 
-            component={EditarTarea} 
-            options={{ title: 'Editar Tarea' }}
-          />
-          <Stack.Screen 
-            name="Crear_tarea" 
-            component={ViewProfile} 
-            options={{ title: 'Crear tarea' }}
-          />
-          <Stack.Screen 
-            name="Listar_tareas" 
-            component={ViewProfile} 
-            options={{ title: 'Ver Lista de tareas' }}
-          />
-          <Stack.Screen 
-            name="Borrar_tareas" 
-            component={ViewProfile} 
-            options={{ title: 'Ver Lista de tareas' }}
-          />
-        </Stack.Navigator>
-      </NavigationContainer>
-    </PaperProvider>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Home">
+        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="CrearTarea" component={CrearTareaScreen} />
+        <Stack.Screen name="ListarTareas" component={ListarTareasScreen} />
+        <Stack.Screen name="MostrarLista" component={MostrarListaScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
+
+function HomeScreen({ navigation }) {
+  return (
+    <>
+      <Button title="Crear Tarea" onPress={() => navigation.navigate("CrearTarea")} />
+      <Button title="Listar Tareas" onPress={() => navigation.navigate("ListarTareas")} />
+      <Button title="Mostrar Lista" onPress={() => navigation.navigate("MostrarLista")} />
+    </>
   );
 }
