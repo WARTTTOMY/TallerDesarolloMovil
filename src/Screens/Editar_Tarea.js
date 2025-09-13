@@ -1,8 +1,6 @@
-import React, { useState, useEffect } from "react";
-import { View, Text, TextInput, Button, Alert, StyleSheet } from "react-native";
-
-import { StyleSheet, Platform } from "react-native";
-import { ScrollView } from "react-native/types_generated/index";
+import React from "react";
+import { View, Text, TextInput, Button, Alert, StyleSheet, Platform, ScrollView } from "react-native";
+import { useState, useEffect } from "react";
 
 
 const EditarTarea = ({ tarea, onActualizar, navigation }) => {
